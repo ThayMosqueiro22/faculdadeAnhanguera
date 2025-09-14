@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPVF41xoI0r/1bMxCIJ4sfW",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ThayMosqueiro22/faculdadeAnhanguera/blob/main/funcoes\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Sn0ydk-HV95p",
+        "outputId": "8a61bfc8-9024-4f50-df1e-a8471a39573f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Notas dos estudante :  [7.5, 8.0, 6.5, 9.0, 8.0]\n",
+            "Média das notas :  7.8\n",
+            "Situação do estudante :  Aprovado\n"
+          ]
+        }
+      ],
+      "source": [
+        "notas = [7.5,8.0,6.5,9.0,8.0]\n",
+        "\n",
+        "def calculas_media(notas):\n",
+        "  total = sum(notas)\n",
+        "  media = total / len(notas)\n",
+        "  return media\n",
+        "\n",
+        "arredondar_media = lambda media: round(media,2)\n",
+        "\n",
+        "media = calculas_media(notas)\n",
+        "media_arredondada = arredondar_media(media)\n",
+        "\n",
+        "situacao = \"Aprovado\" if media_arredondada >= 7 else \"Reprovado\"\n",
+        "\n",
+        "print(\"Notas dos estudante : \", notas)\n",
+        "print(\"Média das notas : \", media_arredondada)\n",
+        "print(\"Situação do estudante : \", situacao )"
+      ]
+    }
+  ]
+}
